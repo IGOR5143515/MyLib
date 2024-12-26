@@ -111,18 +111,34 @@ namespace MyLib {
 	}
 
 	template<typename T>
-	void List<T>::RemoveByValue(T Data)
+	void List<T>::RemoveByValue(T Data)	
 	{
 		if (!IsValid())return;
 		Node<T>* Temp = First;
+		Node<T>* Previos = Temp;
 
-		while()
+		while (Temp) {
+
+			if (Temp->GetData() == Data) {
+
+				if (First == Last) {
+				delete First;
+				First = Last = nullptr;
+				return;
+				}
+
+				Previos->Next = Temp->Next;
+				delete Temp;
+				return;
+
+			}
+					
+			Previos = Temp;
+			Temp = Temp->Next;
+
+
+		}
 		
-
 	}
-
-
-
-	
 
 }

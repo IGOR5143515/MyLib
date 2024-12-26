@@ -23,9 +23,10 @@ int main()
 {
 	MyLib::List<x>arr;
 	arr.PushBack(x(1, "one"));
-	arr.PushBack(x(2, "two"));
-	arr.PopBack();
 
+
+
+	arr.RemoveByValue(x(2, "one"));
 	arr.Print(print);
 }
 
