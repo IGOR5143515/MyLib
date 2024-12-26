@@ -122,23 +122,21 @@ namespace MyLib {
 			if (Temp->GetData() == Data) {
 
 				if (First == Last) {
-				delete First;
-				First = Last = nullptr;
-				return;
+					delete First;
+					First = Last = nullptr;
+					return;
 				}
 
 				Previos->Next = Temp->Next;
 				delete Temp;
-				return;
+				Temp = Previos;
 
 			}
-					
-			Previos = Temp;
-			Temp = Temp->Next;
 
-
+			if (!Temp)return;
+				Previos = Temp;
+				Temp = Temp->Next;
 		}
 		
 	}
-
 }

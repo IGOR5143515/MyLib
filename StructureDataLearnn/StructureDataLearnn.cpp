@@ -23,10 +23,16 @@ int main()
 {
 	MyLib::List<x>arr;
 	arr.PushBack(x(1, "one"));
+	arr.PushBack(x(2, "one"));
+	arr.PushBack(x(3, "one"));
+	arr.PushBack(x(3, "one"));
+	arr.PushBack(x(3, "one"));
+	arr.PushBack(x(3, "one"));
+	arr.PushBack(x(3, "one"));
+	arr.PushBack(x(3, "one"));
 
 
-
-	arr.RemoveByValue(x(2, "one"));
+	arr.RemoveByValue(x(3, "one"));
 	arr.Print(print);
 }
 
