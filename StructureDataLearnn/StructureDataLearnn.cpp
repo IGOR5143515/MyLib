@@ -1,5 +1,6 @@
 #include <iostream>
 #include "LinkedList.h"
+#include "Node.h"
 
 class x {
 public:
@@ -18,21 +19,25 @@ void print(x value) {
 	std::cout << value.name;
 	std::cout << std::endl;
 }
+void print(x *value) {
+	std::cout << value->age;
+	std::cout << value->name;
+	std::cout << std::endl;
+}
 
 int main()
 {
-	MyLib::List<x>arr;
-	arr.PushBack(x(1, "one"));
-	arr.PushBack(x(2, "one"));
-	arr.PushBack(x(3, "one"));
-	arr.PushBack(x(3, "one"));
-	arr.PushBack(x(3, "one"));
-	arr.PushBack(x(3, "one"));
-	arr.PushBack(x(3, "one"));
-	arr.PushBack(x(3, "one"));
+	x* val = new x(1, "One");
+	x* val2 = new x(2, "Two");
+	MyLib::List<x*>arr;
+
+	arr.PushBack(val);
+	arr.PushBack(val2);
+
+	
+	
 
 
-	arr.RemoveByValue(x(3, "one"));
 	arr.Print(print);
 }
 

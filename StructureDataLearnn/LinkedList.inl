@@ -15,7 +15,7 @@ namespace MyLib {
 	}
 
 	template<typename T>
-	void MyLib::List<T>::PushBack(T Data) {
+	void MyLib::List<T>::PushBack(T &Data) {
 
 		Node<T>* NewData = new Node<T>(Data);
 
@@ -30,7 +30,7 @@ namespace MyLib {
 	}
 
 	template<typename T>
-	void List<T>::PushFront(T Data)
+	void List<T>::PushFront(T &Data)
 	{
 		if (IsValid()) {
 			Node<T>* NewNode = new Node<T>(Data);
@@ -47,7 +47,7 @@ namespace MyLib {
 	}
 
 	template<typename T>
-	void List<T>::InsertAt(int Value, T Data) {
+	void List<T>::InsertAt(int &Value, T &Data) {
 
 		if (!IsValid()||Value<0||Value>GetSize())return;
 		Node<T>*NewNode = new Node<T>(Data);
@@ -104,6 +104,8 @@ namespace MyLib {
 			Temp = Temp->Next;
 		}
 
+
+		Count--;
 		delete Temp->Next;
 		Temp->Next = nullptr;
 		Last = Temp;
@@ -111,7 +113,7 @@ namespace MyLib {
 	}
 
 	template<typename T>
-	void List<T>::RemoveByValue(T Data)	
+	void List<T>::RemoveByValue(T &Data)	
 	{
 		if (!IsValid())return;
 		Node<T>* Temp = First;
@@ -139,4 +141,7 @@ namespace MyLib {
 		}
 		
 	}
+
+
+
 }

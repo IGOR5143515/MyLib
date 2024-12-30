@@ -1,16 +1,7 @@
 #pragma once
 #include <iostream>
+#include"Node.h"
 namespace MyLib {
-	template <typename T>
-	class  Node {
-	private:
-		T Data;
-	public:
-		Node* Next;
-	public:
-		Node(T Value) :Data(Value), Next(nullptr) {}
-		T GetData() { return Data; }
-	};
 
 	template<typename T>
 	class List {
@@ -24,12 +15,14 @@ namespace MyLib {
 		bool IsValid() { return First; }
 		void Print(void(*Output)(T Value));
 
-		void PushBack(T Data);
-		void PushFront(T Data);
-		void InsertAt(int Value, T Data);
+		void PushBack(T  &Data);
+		void PushFront(T &Data);
+		void InsertAt(int &Value, T &Data);
 		void PopFront();
 		void PopBack();
-		void RemoveByValue(T Data);
+		void RemoveByValue(T &Data);
+		
+
 	};
 
 
