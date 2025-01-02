@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include"Node.h"
+
 namespace MyLib {
 
 	template<typename T>
@@ -21,6 +22,8 @@ namespace MyLib {
 		void PopFront();
 		void PopBack();
 		void RemoveByValue(T &Data);
+		Node<T>*Begin() { return First; }
+		Node<T>*End() { return Last; }
 		
 
 	};

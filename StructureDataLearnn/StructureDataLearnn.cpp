@@ -1,6 +1,7 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "Node.h"
+#include"Algorithms/AlgorithmsLib.h"
 
 class x {
 public:
@@ -27,18 +28,19 @@ void print(x *value) {
 
 int main()
 {
-	x* val = new x(1, "One");
-	x* val2 = new x(2, "Two");
-	MyLib::List<x*>arr;
-
-	arr.PushBack(val);
-	arr.PushBack(val2);
-
 	
-	
+	MyLib::List<x>arr;
+	x one(1, "One");
+	x two(2, "Two");
+	arr.PushBack(one);
 
+	arr.RemoveByValue(one);
 
 	arr.Print(print);
+	
+
+
+	//arr.Print(print);
 }
 
 

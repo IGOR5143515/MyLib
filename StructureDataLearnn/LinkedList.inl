@@ -117,25 +117,31 @@ namespace MyLib {
 	{
 		if (!IsValid())return;
 		Node<T>* Temp = First;
-		Node<T>* Previos = Temp;
+		Node<T>* Previos =First;
 
 		while (Temp) {
 
 			if (Temp->GetData() == Data) {
 
-				if (First == Last) {
-					delete First;
-					First = Last = nullptr;
-					return;
-				}
+				if (Temp == First) {
+					First = First->Next;
+					delete Temp;
+					Temp = First;
 
+
+					if (!First) {
+					First = Last = nullptr;
+					}
+				
+					continue;	
+				}
+			
 				Previos->Next = Temp->Next;
 				delete Temp;
 				Temp = Previos;
 
 			}
 
-			if (!Temp)return;
 				Previos = Temp;
 				Temp = Temp->Next;
 		}
