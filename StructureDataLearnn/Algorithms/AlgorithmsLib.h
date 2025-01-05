@@ -1,5 +1,6 @@
 #pragma once
-#include "/Users/IGOR/Source/repos/StructureDataLearnn/StructureDataLearnn/Node.h"
+#include "Node.h"
+
 
 namespace MyLib {
 	template <typename T>
@@ -19,11 +20,19 @@ namespace MyLib {
 
 	}
 
+	template <typename T>
+	void Reverce(const Node<T>& Data){}
 
-	
+	template <typename T>
+	void Clear(Node<T>& Data) {}
+
+	template <typename T>
+	void Sort(Node<T>& Data) {}
+
 
 
 }
+
 
 
 

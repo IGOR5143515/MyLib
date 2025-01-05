@@ -29,6 +29,9 @@
     <ClInclude Include="Algorithms\AlgorithmsLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="LinkedList.inl">

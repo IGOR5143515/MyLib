@@ -16,15 +16,15 @@ namespace MyLib {
 		bool IsValid() { return First; }
 		void Print(void(*Output)(T Value));
 
-		void PushBack(T  &Data);
-		void PushFront(T &Data);
-		void InsertAt(int &Value, T &Data);
+		void PushBack(const T  &Data);
+		void PushFront(const T &Data);
+		void InsertAt( int &Value, const T &Data);
 		void PopFront();
 		void PopBack();
-		void RemoveByValue(T &Data);
+		void RemoveByValue(const T &Data);
 		Node<T>*Begin() { return First; }
 		Node<T>*End() { return Last; }
-		
+		~List();
 
 	};
 

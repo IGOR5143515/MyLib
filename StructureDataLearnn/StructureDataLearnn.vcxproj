@@ -134,6 +134,7 @@
     <ClInclude Include="Algorithms\AlgorithmsLib.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LinkedList.inl" />
