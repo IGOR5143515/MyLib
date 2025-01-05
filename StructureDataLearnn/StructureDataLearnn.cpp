@@ -22,18 +22,22 @@ int main()
 
 	MyLib::Vector<x>arr;
 	MyLib::Vector<x>arr2;
+
 	arr.PushBack(x(1, "One"));
 	arr.PushBack(x(2, "Two"));
 	arr.PushBack(x(3, "Three"));
+	arr.PushBack(x(4, "For"));
 
 	arr2 = arr;
-
+	
+	arr2.Insert(2, x(5, "Five"));
 	for (size_t i = 0; i < arr2.GetSize(); i++)
 	{
-		std::cout << arr2[i].age << std::endl;
-		std::cout << arr2[i].name << std::endl;
+		std::cout << arr2[i].age;
+			
 	}
 }
+
 
 
 //void print(x value) {
