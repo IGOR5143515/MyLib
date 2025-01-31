@@ -128,12 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Stack.cpp" />
     <ClCompile Include="StructureDataLearnn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms\AlgorithmsLib.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>

@@ -96,6 +96,16 @@ namespace MyLib {
 			++Size;
 		}
 
+		void Erase(size_t Index) {
 
+			if (Index > Size)throw std::out_of_range("Out of range");
+
+			for (size_t i = Index; i < Size-1; ++i)
+			{
+
+				Array[Index] = Array[i + 1];		//?
+
+			}
+		}
 	};
 }

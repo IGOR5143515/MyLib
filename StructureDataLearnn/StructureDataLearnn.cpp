@@ -2,52 +2,24 @@
 #include "LinkedList.h"
 #include "Node.h"
 #include"Algorithms/AlgorithmsLib.h"
-#include "Vector.h"
+#include "Stack.h"
 
-class x {
-public:
-	int age;
-	std::string name;
-	x(int a,std::string value):age(a),name(value){}
-	x(){}
-	friend bool operator==(x value1, x value2) {
-		return (value1.age == value2.age && value1.name == value2.name);
-	}
-	~x() {}
-};
+
+
 
 
 int main()
 {
+	Stack<int> s;
 
-	MyLib::Vector<x>arr;
-	MyLib::Vector<x>arr2;
 
-	arr.PushBack(x(1, "One"));
-	arr.PushBack(x(2, "Two"));
-	arr.PushBack(x(3, "Three"));
-	arr.PushBack(x(4, "For"));
+	s.push(1);
+	s.push(2);
+	s.push(3);
+	s.push(4);
+	s.push(5);
 
-	arr2 = arr;
-	
-	arr2.Insert(2, x(5, "Five"));
-	for (size_t i = 0; i < arr2.GetSize(); i++)
-	{
-		std::cout << arr2[i].age;
-			
-	}
+	s.print();
 }
 
 
-
-//void print(x value) {
-//	
-//	std::cout << value.age;
-//	std::cout << value.name;
-//	std::cout << std::endl;
-//}
-//void print(x *value) {
-//	std::cout << value->age;
-//	std::cout << value->name;
-//	std::cout << std::endl;
-//}
